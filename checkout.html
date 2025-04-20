@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Checkout - Carroll Custom Tackle</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Carroll Custom Tackle</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="shop.html">Shop</a>
+      <a href="about.html">About</a>
+      <a href="cart.html">Cart</a>
+    </nav>
+  </header>
+
+  <main class="checkout-page">
+    <h2>Checkout</h2>
+    <form id="checkout-form">
+      <label>Name on Card
+        <input type="text" name="name" required />
+      </label>
+
+      <label>Email Address
+        <input type="email" name="email" required />
+      </label>
+
+      <label>Shipping Address
+        <textarea name="address" required></textarea>
+      </label>
+
+      <label>Card Info (Mock for now)
+        <input type="text" name="card" placeholder="1234 5678 9012 3456" required />
+      </label>
+
+      <button type="submit">Place Order</button>
+    </form>
+
+    <p class="disclaimer">⚠️ This is a demo — secure checkout integration coming soon!</p>
+  </main>
+</body>
+</html>
