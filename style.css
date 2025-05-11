@@ -4,6 +4,24 @@
     box-sizing: border-box;
   }
   
+  .site-branding {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .site-logo {
+    height: 50px; /* Adjust as needed */
+    width: auto;
+  }
+
+  .site-branding h1 {
+  font-family: 'Poppins', sans-serif; /* Already imported */
+  font-size: 1.5rem;                 /* Try 2rem+ for bold, 1.5rem for sleek */
+  letter-spacing: 0px;                /* Adjust spacing between letters */
+  margin: 0;                          /* Removes default spacing */
+  }
+
   body {
     font-family: 'Roboto', sans-serif;
     background-color: #f9f9f9;
@@ -21,10 +39,18 @@
   }
   
   nav a {
-    margin-left: 1.5rem;
+    font-family: 'Poppins', sans-serif;
+    font-size: .7rem;            /* Try 0.9rem for more compact look */
+    font-weight: 500;
+    letter-spacing: 0.3px;
     text-decoration: none;
     color: white;
-    font-weight: bold;
+    margin-left: .1rem;        /* Controls spacing between links */
+    transition: color 0.2s ease;
+  }
+
+  nav a:hover {
+    color: hsl(234, 95%, 37%);
   }
   
   .hero {
@@ -252,4 +278,58 @@
     color: gray;
     margin-top: 1rem;
   }
-  
+
+/* 📱 Phones (up to 600px wide) */
+@media (max-width: 600px) {
+  .product-section {
+    grid-template-columns: 1fr; /* Stack products vertically */
+    padding: 1rem;
+  }
+
+  .product-card {
+    max-width: 100%;
+  }
+
+  .product-img {
+    max-width: 100%;
+  }
+
+  header, nav {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  nav {
+    gap: 0.5rem;
+  }
+
+  .cart-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .cart-details {
+    flex-direction: column;
+  }
+
+  .checkout-page {
+    padding: 1rem;
+  }
+}
+
+/* 📱📲 Tablets (601px–900px) */
+@media (min-width: 601px) and (max-width: 900px) {
+  .product-section {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    padding: 2rem;
+  }
+
+  .cart-item {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .product-img {
+    max-width: 200px;
+  }
+}
